@@ -4,7 +4,9 @@
 // Reset
 @import "compass/reset";
 
-$family:           aktiv-grotesk-std, Helvetica Neue, Helvetica, Arial, sans-serif;
+$family-sans:      ff-meta-web-pro, Helvetica, Arial, sans-serif;
+$family-serif      ff-meta-serif-web-pro, georgia, serif;
+
 $base-font-size:   20px;
 $base-line-height: 30px;
 $round-to-nearest-half-line: true;
@@ -14,9 +16,9 @@ $regular:              400;
 $bold:                 700;
 
 $bgcolor:              #bc0031;
-$text-color:           #000;
-$light-text-color:     #777;
-$border-color:         #bbb;
+$text-color:           #231f20;
+$light-text-color:     #666666;
+$border-color:         #dbdbdb;
 $link-color:           #2727a4;
 $link-hover-color:     $text-color;
 
@@ -24,7 +26,7 @@ $link-hover-color:     $text-color;
 
 body {
   background-color: $bgcolor;
-  font-family: $family;
+  font-family: $family-sans;
   font-weight: $regular;
   color: $text-color;
   margin: 0;
@@ -37,7 +39,8 @@ p {
 
 h1 {
   @include adjust-font-size-to(32px);
-  font-weight: $regular;
+  font-family: $family-serif;
+  font-weight: $bold;
   text-rendering: optimizeLegibility;
   @include trailer;
 }
