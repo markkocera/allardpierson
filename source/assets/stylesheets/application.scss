@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@import "compass";
+
+// Reset
+@import "compass/reset";
+
+$family:           aktiv-grotesk-std, Helvetica Neue, Helvetica, Arial, sans-serif;
+$base-font-size:   20px;
+$base-line-height: 30px;
+$round-to-nearest-half-line: true;
+$rhythm-unit:                "rem";
+
+$regular:              400;
+$bold:                 700;
+
+$bgcolor:              #bc0031;
+$text-color:           #000;
+$light-text-color:     #777;
+$border-color:         #bbb;
+$link-color:           #2727a4;
+$link-hover-color:     $text-color;
+
+@include establish-baselinen;
+
+body {
+  background-color: $bgcolor;
+  font-family: $family;
+  font-weight: $regular;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  @include trailer;
+}
+
+h1 {
+  @include adjust-font-size-to(32px);
+  font-weight: $regular;
+  text-rendering: optimizeLegibility;
+  @include trailer;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: $link-hover-color;
+  }
+}
