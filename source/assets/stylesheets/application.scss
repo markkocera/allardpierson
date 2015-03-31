@@ -5,24 +5,32 @@
 @import "compass/reset";
 
 $family-sans:      ff-meta-web-pro, Helvetica, Arial, sans-serif;
-$family-serif      ff-meta-serif-web-pro, georgia, serif;
+$family-serif:     ff-meta-serif-web-pro, georgia, serif;
 
-$base-font-size:   20px;
-$base-line-height: 30px;
+$base-font-size:   18px;
+$base-line-height: 26px;
 $round-to-nearest-half-line: true;
 $rhythm-unit:                "rem";
 
 $regular:              400;
 $bold:                 700;
 
-$bgcolor:              #bc0031;
+$bgcolor:              white;
 $text-color:           #231f20;
 $light-text-color:     #666666;
 $border-color:         #dbdbdb;
-$link-color:           #2727a4;
+$link-color:           #bc0031;
 $link-hover-color:     $text-color;
+$signup-bg:            $border-color;
 
-@include establish-baselinen;
+@include establish-baseline;
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
   background-color: $bgcolor;
@@ -38,11 +46,25 @@ p {
 }
 
 h1 {
-  @include adjust-font-size-to(32px);
   font-family: $family-serif;
   font-weight: $bold;
+  @include adjust-font-size-to(36px);
   text-rendering: optimizeLegibility;
   @include trailer;
+  text-align: center;
+  color: $link-color;
+  font-feature-settings: "liga";
+}
+
+h2 {
+  font-family: $family-sans;
+  font-weight: $bold;
+  @include adjust-font-size-to(18px);
+  text-rendering: optimizeLegibility;
+  @include trailer(1);
+  text-align: center;
+  @include padding-trailer(0.5);
+  border-bottom: 1px solid $border-color;
 }
 
 a {
@@ -52,4 +74,109 @@ a {
   &:hover, &:focus {
     color: $link-hover-color;
   }
+}
+
+strong {
+  font-weight: $bold;
+}
+em {
+  font-style: italic;
+}
+
+.lang-switcher {
+  display: none;
+  position: absolute;
+  top: 0;
+  a {
+    @include adjust-font-size-to(14px);
+    padding: 10px;
+  }
+}
+
+.info-text {
+  margin: rhythm(2) auto;
+  width: 840px;
+}
+
+.signup {
+  margin: 0 auto;
+  width: 1000px;
+  padding: 30px;
+  background: $signup-bg;
+  @include clearfix;
+}
+
+.name, .email, .action {
+  @include float;
+  margin: 0 15px 0 0;
+}
+.name, .email {
+  width: 372px;
+}
+.action {
+  margin: 0;
+}
+
+label {
+  display: none;
+}
+
+input[type=text], input[type=email], button {
+  padding: 5px 7px;
+  font-family: $family-sans;
+  font-weight: $regular;
+  @include adjust-font-size-to(19px);
+  @include border-radius(1px);
+  width: 100%;
+  border: 2px solid darken($border-color, 5%);;
+  vertical-align: middle;
+  @include transition(border linear .2s);
+}
+
+input:focus {
+  outline: 0;
+  border-color: white
+}
+
+button {
+  background: $link-color;
+  color: white;
+  border: none;
+  @include adjust-font-size-to(17px);
+  @include border-radius(3px);
+  padding: 6px 15px 5px;
+  border-bottom: 2px solid darken($link-color, 10%);
+  cursor: pointer;
+  vertical-align: middle;
+  user-select: none;
+  outline: 0;
+  width: 165px;
+  &:hover {
+    background: darken($link-color, 10%);
+  }
+  &:active {
+    margin: 1px 0 0 1px;
+  }
+}
+::placeholder {
+  color: $light-text-color;
+  opacity: 1;
+}
+
+.books {
+  margin: rhythm(2) auto;
+  width: 840px;
+  @include clearfix;
+}
+.book-image {
+  @include float;
+  width: 280px;
+  padding: 0 10px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.should-be-smaller {
+  padding: 0 40px;
 }

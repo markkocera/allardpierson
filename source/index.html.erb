@@ -1,0 +1,37 @@
+<section class="lang-switcher">
+  <%= link_to 'View this page in English…', 'english.html' %>
+</section>
+
+<section class="info-text">
+  <h1>Blijf op de hoogte</h1>
+  <p>
+    Wil je graag <strong>op de hoogte blijven</strong> van de tentoonstellingen en activiteiten van
+    het <strong>Allard Pierson Museum</strong>? <em>Laat dan hieronder je e-mailadres achter</em>.
+    Bovendien maak je dan kans op een <strong>boekenpakket</strong> samengesteld
+    uit onze museumwinkel ter waarde van <strong>€ 50,-</strong>. Maandelijks wordt er een winnaar
+    bekend gemaakt.
+  </p>
+</section>
+
+<section class="signup">
+  <form action="http://markkocera.createsend.com/t/d/s/iruuil/" method="post" id="subForm">
+    <p class="name">
+      <label for="fieldName">Naam</label>
+      <input id="fieldName" name="cm-name" type="text" placeholder="Naam" autofocus="true">
+    </p>
+    <p class="email">
+      <label for="fieldEmail">E-mailadres</label>
+      <input id="fieldEmail" name="cm-iruuil-iruuil" type="email" required placeholder="E-mailadres">
+    </p>
+    <p class="action">
+      <button type="submit">Aanmelden</button>
+    </p>
+  </form>
+</section>
+
+<section class="books">
+  <h2>Boekenpakket</h2>
+  <div class="book-image"><%= image_tag 'keys-to-rome.png' %></div>
+  <div class="book-image should-be-smaller"><%= image_tag '75-jaar.jpg' %></div>
+  <div class="book-image"><%= image_tag 'eeuwig-egypte.png' %></div>
+</section>
