@@ -1,0 +1,29 @@
+---
+title: Bedankt
+---
+
+<header class="main-header">
+  <%= link_to(image_tag('logo.jpg', class: 'logo'), '/index.html') %>
+</header>
+
+<section class="info-text">
+  <h1>Bedankt voor je interesse</h1>
+  <p class="is-centered">
+    Je bent nu aangemeld voor onze nieuwsbrief en maakt kans op het
+    boekenpakket.<br> Deze pagina gaat over <strong id="js-count">10</strong>
+    seconden automatisch terug naar de <%= link_to('beginpagina', '/index.html')
+    %>.
+  </p>
+</section>
+
+<script>
+  var counter = 10;
+  setInterval(function() {
+    counter--;
+    if (counter < 1) {
+      window.location = '<%= url_for('/index.html') %>';
+    } else {
+      document.getElementById("js-count").innerHTML = counter;
+    }
+  }, 1000);
+</script>

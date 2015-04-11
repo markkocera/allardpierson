@@ -1,6 +1,13 @@
-<section class="lang-switcher">
-  <%= link_to 'View this page in English…', 'english.html' %>
-</section>
+---
+title: Blijf op de hoogte
+---
+
+<header class="main-header">
+  <%= image_tag 'logo.jpg', class: 'logo' %>
+  <div class="lang-switcher">
+    <%= link_to 'View this page in English…', '/en/' %>
+  </div>
+</header>
 
 <section class="info-text">
   <h1>Blijf op de hoogte</h1>
@@ -31,7 +38,7 @@
 
 <section class="books">
   <h2>Boekenpakket</h2>
-  <div class="book-image"><%= image_tag 'keys-to-rome.png' %></div>
+  <div class="book-image"><%= image_tag 'van-rome-naar-romeins.png' %></div>
   <div class="book-image should-be-smaller"><%= image_tag '75-jaar.jpg' %></div>
   <div class="book-image"><%= image_tag 'eeuwig-egypte.png' %></div>
 </section>
