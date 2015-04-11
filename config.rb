@@ -2,7 +2,7 @@ activate :automatic_image_sizes
 activate :livereload
 
 activate :directory_indexes
-set :relative_links, false
+set :relative_links, true
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
@@ -17,5 +17,5 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :git
-  deploy.build_before = false
+  deploy.build_before = true
 end
