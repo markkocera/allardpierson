@@ -6,13 +6,13 @@
     <title>Thanks - Allard Pierson Museum</title>
     <script src="//use.typekit.net/wqw8zbr.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
-    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
-    <script src="../../assets/javascripts/all.js" type="text/javascript"></script>
+    <link href="../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../assets/javascripts/all.js" type="text/javascript"></script>
   </head>
 
   <body>
     <header class="main-header">
-  <a href="/en/"><img class="logo" width="467" height="29" src="../../assets/images/logo.jpg" /></a>
+  <a href="../english/"><img class="logo" width="467" height="29" src="../assets/images/logo.jpg" /></a>
 </header>
 
 <section class="info-text">
@@ -20,7 +20,7 @@
   <p class="is-centered">
     You are now subscribed to our newsletter and your name is entered for a
     chance to win the books. <br> In <strong id="js-count">10</strong> seconds
-    this page will return to the <a href="/en/">starting page</a>.
+    this page will return to the <a href="../english/">starting page</a>.
   </p>
 </section>
 
@@ -29,7 +29,7 @@
  setInterval(function() {
    counter--;
    if (counter < 1) {
-     window.location = '/en/';
+     window.location = '../english/';
    } else {
      document.getElementById("js-count").innerHTML = counter;
    }
