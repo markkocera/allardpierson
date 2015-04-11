@@ -83,19 +83,32 @@ em {
   font-style: italic;
 }
 
+.main-header {
+  @include clearfix;
+  padding: 10px 20px 10px;
+  border-bottom: 1px solid $border-color;
+}
+
+.logo {
+  @include float(left);
+  line-height: 1;
+}
+
 .lang-switcher {
-  display: none;
-  position: absolute;
-  top: 0;
+  @include float(right);
   a {
-    @include adjust-font-size-to(14px);
-    padding: 10px;
+    @include adjust-font-size-to(16px);
+    font-weight: $bold;
   }
 }
 
 .info-text {
   margin: rhythm(2) auto;
   width: 840px;
+}
+
+.is-centered {
+  text-align: center;
 }
 
 .signup {
