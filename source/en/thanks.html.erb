@@ -1,0 +1,28 @@
+---
+title: Thanks
+---
+
+<header class="main-header">
+  <%= link_to(image_tag('logo.jpg', class: 'logo'), '/en/') %>
+</header>
+
+<section class="info-text">
+  <h1>Thank you for your interest</h1>
+  <p class="is-centered">
+    You are now subscribed to our newsletter and your name is entered for a
+    chance to win the books. <br> In <strong id="js-count">10</strong> seconds
+    this page will return to the <%= link_to('starting page', '/en/') %>.
+  </p>
+</section>
+
+<script>
+  var counter = 10;
+ setInterval(function() {
+   counter--;
+   if (counter < 1) {
+     window.location = '<%= url_for('/en/') %>';
+   } else {
+     document.getElementById("js-count").innerHTML = counter;
+   }
+ }, 1000);
+</script>

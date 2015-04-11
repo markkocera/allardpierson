@@ -1,0 +1,43 @@
+---
+title: Stay up to date
+---
+
+<header class="main-header">
+  <%= image_tag 'logo.jpg', class: 'logo' %>
+  <div class="lang-switcher">
+    <%= link_to 'Bekijk deze pagina in het Nederlands…', '/index.html' %>
+  </div>
+</header>
+
+<section class="info-text">
+  <h1>Stay up to date</h1>
+  <p>
+    Would you like <strong>to be kept up to date</strong> on exhibitions and activities in the
+    <strong>Allard Pierson Museum</strong>? <em>Then leave your email address here</em>. To boot, your
+    name will be entered for a chance to win a set of books from our museum shop
+    worth <strong>€ 50,-</strong>. Every month a new winner will be announced.
+  </p>
+</section>
+
+<section class="signup">
+  <form action="http://markkocera.createsend.com/t/d/s/iykllu/" method="post" id="subForm">
+    <p class="name">
+      <label for="fieldName">Name</label>
+      <input id="fieldName" name="cm-name" type="text" placeholder="Name" autofocus="true">
+    </p>
+    <p class="email">
+      <label for="fieldEmail">Email address</label>
+      <input id="fieldEmail" name="cm-iykllu-iykllu" type="email" required placeholder="Email adress">
+    </p>
+    <p class="action">
+      <button type="submit">Subscribe</button>
+    </p>
+  </form>
+</section>
+
+<section class="books">
+  <h2>Boekenpakket</h2>
+  <div class="book-image"><%= image_tag 'keys-to-rome.png' %></div>
+  <div class="book-image should-be-smaller"><%= image_tag '75-jaar.jpg' %></div>
+  <div class="book-image"><%= image_tag 'eternal-egypt.png' %></div>
+</section>
