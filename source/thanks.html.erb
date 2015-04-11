@@ -3,7 +3,7 @@ title: Thanks
 ---
 
 <header class="main-header">
-  <%= link_to(image_tag('logo.jpg', class: 'logo'), '/en/') %>
+  <%= link_to(image_tag('logo.jpg', class: 'logo'), '/english.html') %>
 </header>
 
 <section class="info-text">
@@ -11,7 +11,7 @@ title: Thanks
   <p class="is-centered">
     You are now subscribed to our newsletter and your name is entered for a
     chance to win the books. <br> In <strong id="js-count">10</strong> seconds
-    this page will return to the <%= link_to('starting page', '/en/') %>.
+    this page will return to the <%= link_to('starting page', '/english.html') %>.
   </p>
 </section>
 
@@ -20,7 +20,7 @@ title: Thanks
  setInterval(function() {
    counter--;
    if (counter < 1) {
-     window.location = '<%= url_for('/en/') %>';
+     window.location = '<%= url_for('/english.html') %>';
    } else {
      document.getElementById("js-count").innerHTML = counter;
    }
