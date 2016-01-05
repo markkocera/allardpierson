@@ -145,13 +145,9 @@ p.action {
   @include float;
   text-align: right;
   margin: 10px 0 0 0;
-  &.action-en {
-    margin-top: 0;
-  }
 }
 
 label {
-  display: none;
   &.radio {
     display: block;
   }
