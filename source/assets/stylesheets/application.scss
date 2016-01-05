@@ -7,8 +7,8 @@
 $family-sans:      ff-meta-web-pro, Helvetica, Arial, sans-serif;
 $family-serif:     ff-meta-serif-web-pro, georgia, serif;
 
-$base-font-size:   18px;
-$base-line-height: 26px;
+$base-font-size:   20px;
+$base-line-height: 28px;
 $round-to-nearest-half-line: true;
 $rhythm-unit:                "rem";
 
@@ -59,12 +59,10 @@ h1 {
 h2 {
   font-family: $family-sans;
   font-weight: $bold;
-  @include adjust-font-size-to(18px);
+  @include adjust-font-size-to(20px);
   text-rendering: optimizeLegibility;
   @include trailer(1);
   text-align: center;
-  @include padding-trailer(0.5);
-  border-bottom: 1px solid $border-color;
 }
 
 a {
@@ -97,53 +95,97 @@ em {
 .lang-switcher {
   @include float(right);
   a {
-    @include adjust-font-size-to(16px);
+    @include adjust-font-size-to(18px);
     font-weight: $bold;
   }
 }
 
 .info-text {
-  margin: rhythm(2) auto;
-  width: 840px;
+  margin: rhythm(1.5) auto;
+  width: 920px;
 }
 
 .is-centered {
   text-align: center;
 }
 
-.signup {
+.container {
+  @include clearfix;
   margin: 0 auto;
-  width: 1000px;
+  width: 1200px;
+}
+
+.signup {
+  @include float;
+  width: 600px;
   padding: 30px;
   background: $signup-bg;
+}
+
+.signup p {
+  margin: 0 0 15px 0;
+}
+
+.floated-fields {
   @include clearfix;
 }
 
-.name, .email, .action {
+p.postalcode {
   @include float;
-  margin: 0 15px 0 0;
+  width: 100px;
+  margin-right: 20px;
 }
-.name, .email {
-  width: 372px;
+p.city {
+  @include float;
+  width: 420px;
 }
-.action {
+
+p.country {
+  width: 50%;
+  @include float;
   margin: 0;
+}
+p.action {
+  width: 50%;
+  @include float;
+  text-align: right;
+  margin: 10px 0 0 0;
+  &.action-en {
+    margin-top: 0;
+  }
 }
 
 label {
   display: none;
+  &.radio {
+    display: block;
+  }
 }
 
-input[type=text], input[type=email], button {
+input, button {
   padding: 5px 7px;
   font-family: $family-sans;
   font-weight: $regular;
   @include adjust-font-size-to(19px);
   @include border-radius(1px);
   width: 100%;
-  border: 2px solid darken($border-color, 5%);;
+  border: 2px solid darken($border-color, 5%);
   vertical-align: middle;
   @include transition(border linear .2s);
+}
+
+input[type="radio"] {
+  display: inline;
+  width: auto;
+  margin-right: 5px;
+}
+
+select {
+  display: block;
+  width: auto;
+  font-family: $family-sans;
+  font-weight: $regular;
+  @include adjust-font-size-to(19px);
 }
 
 input:focus {
@@ -155,9 +197,10 @@ button {
   background: $link-color;
   color: white;
   border: none;
-  @include adjust-font-size-to(17px);
+  @include adjust-font-size-to(19px);
+  font-weight: $bold;
   @include border-radius(3px);
-  padding: 6px 15px 5px;
+  padding: 8px 15px 4px;
   border-bottom: 2px solid darken($link-color, 10%);
   cursor: pointer;
   vertical-align: middle;
@@ -177,13 +220,15 @@ button {
 }
 
 .books {
-  margin: rhythm(2) auto;
-  width: 840px;
+  width: 580px;
+  margin: rhythm(1) 0 0 20px;
+  @include float;
   @include clearfix;
 }
+
 .book-image {
-  @include float;
-  width: 280px;
+  float: left;
+  width: 200px;
   padding: 0 10px;
   img {
     width: 100%;
@@ -191,5 +236,5 @@ button {
   }
 }
 .should-be-smaller {
-  padding: 0 40px;
+  width: 150px;
 }

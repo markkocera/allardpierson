@@ -13,32 +13,60 @@ title: Blijf op de hoogte
   <h1>Blijf op de hoogte</h1>
   <p>
     Wil je graag <strong>op de hoogte blijven</strong> van de tentoonstellingen en activiteiten van
-    het <strong>Allard Pierson Museum</strong>? <em>Laat dan hieronder je e-mailadres achter</em>.
+    het <strong>Allard Pierson Museum</strong>? <em>Laat dan hieronder je gegevens achter</em>.
     Bovendien maak je dan kans op een <strong>boekenpakket</strong> samengesteld
     uit onze museumwinkel ter waarde van <strong>€ 50,-</strong>. Maandelijks wordt er een winnaar
     bekend gemaakt.
   </p>
 </section>
 
-<section class="signup">
-  <form action="http://markkocera.createsend.com/t/d/s/iruuil/" method="post" id="subForm">
-    <p class="name">
-      <label for="fieldName">Naam</label>
-      <input id="fieldName" name="cm-name" type="text" placeholder="Naam" autofocus="true">
-    </p>
-    <p class="email">
-      <label for="fieldEmail">E-mailadres</label>
-      <input id="fieldEmail" name="cm-iruuil-iruuil" type="email" required placeholder="E-mailadres">
-    </p>
-    <p class="action">
-      <button type="submit">Aanmelden</button>
-    </p>
-  </form>
-</section>
+<section class="container">
+  <section class="signup">
+    <form action="http://markkocera.createsend.com/t/d/s/iruuil/" method="post" id="subForm">
+      <p class="name">
+        <label for="fieldName">Naam</label>
+        <input id="fieldName" name="cm-name" type="text" placeholder="Naam" autofocus="true">
+      </p>
+      <p class="email">
+        <label for="fieldEmail">E-mailadres</label>
+        <input id="fieldEmail" name="cm-iruuil-iruuil" type="email" required placeholder="E-mailadres">
+      </p>
+      <p class="address">
+        <label for="fieldirejh">Straat + huisnummer</label>
+        <input id="fieldirejh" name="cm-f-irejh" type="text" placeholder="Straat + huisnummer" />
+      </p>
+      <div class="floated-fields">
+        <p class="postalcode">
+          <label for="fieldirejk">Postcode</label>
+          <input id="fieldirejk" name="cm-f-irejk" type="text" placeholder="Postcode" />
+        </p>
+        <p class="city">
+          <label for="fieldiryhhh">Plaats</label>
+          <input id="fieldiryhhh" name="cm-f-iryhhh" type="text" placeholder="Plaats" />
+        </p>
+      </div>
+      <div class="floated-fields">
+        <p class="country">
+          <label class="radio">
+            <input type="radio" name="cm-fo-iryhhk" value="372169" checked>
+            Nederland
+          </label>
+          <label class="radio">
+            <input type="radio" name="cm-fo-iryhhk" value="372170">
+            België
+          </label>
+        </p>
+        <p class="action">
+          <button type="submit">Aanmelden</button>
+        </p>
+      </div>
+    </form>
+  </section>
 
-<section class="books">
-  <h2>Boekenpakket</h2>
-  <div class="book-image"><%= image_tag 'van-rome-naar-romeins.png' %></div>
-  <div class="book-image should-be-smaller"><%= image_tag '75-jaar.jpg' %></div>
-  <div class="book-image"><%= image_tag 'eeuwig-egypte.png' %></div>
+  <section class="books">
+    <h2>Boekenpakket</h2>
+    <div class="book-image"><%= image_tag 'van-rome-naar-romeins.png' %></div>
+    <div class="book-image should-be-smaller"><%= image_tag '75-jaar.jpg' %></div>
+    <div class="book-image"><%= image_tag 'eeuwig-egypte.png' %></div>
+  </section>
 </section>
