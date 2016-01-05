@@ -63,6 +63,7 @@ h2 {
   text-rendering: optimizeLegibility;
   @include trailer(1);
   text-align: center;
+  border-bottom: 1px solid $border-color;
 }
 
 a {
@@ -109,15 +110,9 @@ em {
   text-align: center;
 }
 
-.container {
-  @include clearfix;
-  margin: 0 auto;
-  width: 1200px;
-}
-
 .signup {
-  @include float;
-  width: 630px;
+  width: 800px;
+  margin: 0 auto;
   padding: 30px;
   background: $signup-bg;
 }
@@ -137,7 +132,7 @@ p.postalcode {
 }
 p.city {
   @include float;
-  width: 440px;
+  width: 610px;
 }
 
 p.country {
@@ -220,15 +215,13 @@ button {
 }
 
 .books {
-  width: 520px;
-  margin: rhythm(1) 0 0 20px;
-  @include float;
+  margin: rhythm(2) auto;
+  width: 800px;
   @include clearfix;
 }
-
 .book-image {
-  float: left;
-  width: 190px;
+  @include float;
+  width: 260px;
   padding: 0 10px;
   img {
     width: 100%;
@@ -236,5 +229,5 @@ button {
   }
 }
 .should-be-smaller {
-  width: 140px;
+  padding: 0 40px;
 }
