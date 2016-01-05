@@ -102,7 +102,7 @@ em {
 }
 
 .info-text {
-  margin: rhythm(1.5) auto;
+  margin: rhythm(1) auto;
   width: 920px;
 }
 
@@ -211,7 +211,7 @@ button {
 }
 
 .books {
-  margin: rhythm(2) auto;
+  margin: rhythm(1) auto 0 auto;
   width: 800px;
   @include clearfix;
 }
