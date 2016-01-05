@@ -117,7 +117,7 @@ em {
 
 .signup {
   @include float;
-  width: 600px;
+  width: 630px;
   padding: 30px;
   background: $signup-bg;
 }
@@ -132,12 +132,12 @@ em {
 
 p.postalcode {
   @include float;
-  width: 100px;
-  margin-right: 20px;
+  width: 115px;
+  margin-right: 15px;
 }
 p.city {
   @include float;
-  width: 420px;
+  width: 440px;
 }
 
 p.country {
@@ -220,7 +220,7 @@ button {
 }
 
 .books {
-  width: 580px;
+  width: 520px;
   margin: rhythm(1) 0 0 20px;
   @include float;
   @include clearfix;
@@ -228,7 +228,7 @@ button {
 
 .book-image {
   float: left;
-  width: 200px;
+  width: 190px;
   padding: 0 10px;
   img {
     width: 100%;
@@ -236,5 +236,5 @@ button {
   }
 }
 .should-be-smaller {
-  width: 150px;
+  width: 140px;
 }
